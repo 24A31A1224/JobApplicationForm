@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply for Your Dream Role | Careers</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page" aria-labelledby="page-title">
+    <div class="bg" aria-hidden="true">
+      <span class="blob blob--1"></span>
+      <span class="blob blob--2"></span>
+      <span class="blob blob--3"></span>
+      <span class="grid-glow"></span>
+    </div>
+
+    <section class="card" role="region" aria-label="Job application form">
+      <div class="card__top">
+        <span class="badge" aria-label="Careers badge">
+          <i class="fa-solid fa-briefcase"></i>
+          Careers
+        </span>
+
+        <div class="progress" aria-hidden="true">
+          <div class="progress__track"></div>
+          <div class="progress__bar" id="progressBar"></div>
+          <div class="progress__text" id="progressText">0%</div>
+        </div>
+      </div>
+
+      <header class="card__header">
+        <h1 class="title" id="page-title">Apply for Your Dream Role</h1>
+        <p class="subtitle">
+          We’d love to know more about you. Fill out the application form below and our team will review your details soon.
+        </p>
+      </header>
+
+      <form id="applicationForm" class="form" novalidate>
+        <div class="form__field">
+          <label for="fullName">Full Name</label>
+          <div class="input-wrap" data-field="fullName">
+            <i class="fa-regular fa-user input-icon" aria-hidden="true"></i>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="e.g., Priya Sharma"
+              autocomplete="name"
+              required
+              aria-describedby="fullNameError"
+            />
+          </div>
+          <div class="hint" id="fullNameError" role="alert" aria-live="polite"></div>
+        </div>
+
+        <div class="form__field">
+          <label for="email">Email Address</label>
+          <div class="input-wrap" data-field="email">
+            <i class="fa-regular fa-envelope input-icon" aria-hidden="true"></i>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="e.g., priya@email.com"
+              autocomplete="email"
+              required
+              aria-describedby="emailError"
+            />
+          </div>
+          <div class="hint" id="emailError" role="alert" aria-live="polite"></div>
+        </div>
+
+        <div class="form__field">
+          <label for="phone">Phone Number</label>
+          <div class="input-wrap" data-field="phone">
+            <i class="fa-solid fa-phone input-icon" aria-hidden="true"></i>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="e.g., 9876543210"
+              inputmode="numeric"
+              required
+              aria-describedby="phoneError"
+            />
+          </div>
+          <div class="hint" id="phoneError" role="alert" aria-live="polite"></div>
+        </div>
+
+        <div class="form__field form__field--textarea">
+          <div class="label-row">
+            <label for="message">Message</label>
+            <div class="counter" aria-label="Message character counter">
+              <span id="counterCurrent">0</span>/<span id="counterMax">250</span>
+            </div>
+          </div>
+
+          <div class="input-wrap input-wrap--textarea" data-field="message">
+            <i class="fa-regular fa-message input-icon" aria-hidden="true"></i>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tell us about yourself, your experience, and why you’re excited about this role..."
+              rows="5"
+              maxlength="250"
+              required
+              aria-describedby="messageError"
+            ></textarea>
+          </div>
+          <div class="hint" id="messageError" role="alert" aria-live="polite"></div>
+        </div>
+
+        <div class="form__bottom">
+          <div class="privacy" aria-hidden="true">
+            <i class="fa-regular fa-circle-check"></i>
+            Your information stays private and is only used for recruitment review.
+          </div>
+
+          <button type="submit" class="btn" id="submitBtn" aria-label="Submit application">
+            <span class="btn__icon" aria-hidden="true">
+              <i class="fa-solid fa-paper-plane"></i>
+            </span>
+            <span class="btn__text">Submit Application</span>
+            <span class="btn__loading" aria-hidden="true">
+              <i class="fa-solid fa-spinner fa-spin"></i>
+              Submitting
+            </span>
+          </button>
+        </div>
+
+        <div class="form__note" aria-hidden="true">
+          Tip: Fields are validated as you type and when you leave a field.
+        </div>
+      </form>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle" aria-hidden="true">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content" role="document">
+        <div class="modal__icon" aria-hidden="true">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h2 class="modal__title" id="successTitle">Application Submitted</h2>
+        <p class="modal__message" id="successMessage">
+          Your application has been submitted successfully. Our team will reach out to you soon.
+        </p>
+        <button class="modal__btn" type="button" data-close-modal aria-label="Close success message">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          Close
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
