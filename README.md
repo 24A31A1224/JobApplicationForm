@@ -54,9 +54,6 @@ Job-Application-Form/
 1. Open `index.html` in your browser.
 2. (Optional) Use Live Server in VSCode for the best experience.
 
-## Screenshots
-*Add screenshots here (desktop, tablet, mobile, and validation/error states).*
-
 ## Future Improvements
 - Add dropdowns (e.g., Department, Experience Level)
 - Add file upload for resume (client-side preview)
